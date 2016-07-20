@@ -12,7 +12,7 @@
 		BF99A42B1D3F6D69001AC873 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF99A42A1D3F6D69001AC873 /* Assets.xcassets */; };
 		BF99A42E1D3F6D69001AC873 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF99A42C1D3F6D69001AC873 /* Main.storyboard */; };
 		BF99A4391D3F6D69001AC873 /* MKMapKitDebugTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF99A4381D3F6D69001AC873 /* MKMapKitDebugTests.swift */; };
-		BF99A4441D3F7203001AC873 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF99A4431D3F7203001AC873 /* MapKit.framework */; };
+		BFB35ECB1D3F76F60085ACB5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFB35ECA1D3F76F60085ACB5 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,8 +35,9 @@
 		BF99A4341D3F6D69001AC873 /* MKMapKitDebugTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MKMapKitDebugTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF99A4381D3F6D69001AC873 /* MKMapKitDebugTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKMapKitDebugTests.swift; sourceTree = "<group>"; };
 		BF99A43A1D3F6D69001AC873 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BF99A4431D3F7203001AC873 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		BF99A4451D3F7203001AC873 /* MKMapKitDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = MKMapKitDebug.entitlements; sourceTree = "<group>"; };
+		BFB35ECA1D3F76F60085ACB5 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		BFB35ECC1D3F99130085ACB5 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,7 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF99A4441D3F7203001AC873 /* MapKit.framework in Frameworks */,
+				BFB35ECB1D3F76F60085ACB5 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,7 +62,8 @@
 		BF99A41A1D3F6D69001AC873 = {
 			isa = PBXGroup;
 			children = (
-				BF99A4431D3F7203001AC873 /* MapKit.framework */,
+				BFB35ECC1D3F99130085ACB5 /* README.md */,
+				BFB35ECA1D3F76F60085ACB5 /* MapKit.framework */,
 				BF99A4251D3F6D69001AC873 /* MKMapKitDebug */,
 				BF99A4371D3F6D69001AC873 /* MKMapKitDebugTests */,
 				BF99A4241D3F6D69001AC873 /* Products */,
@@ -327,11 +329,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = MKMapKitDebug/MKMapKitDebug.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = MKMapKitDebug/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.tofan.MKMapKitDebug;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -340,11 +345,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = MKMapKitDebug/MKMapKitDebug.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = MKMapKitDebug/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.tofan.MKMapKitDebug;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -393,6 +401,7 @@
 				BF99A43F1D3F6D69001AC873 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BF99A4401D3F6D69001AC873 /* Build configuration list for PBXNativeTarget "MKMapKitDebugTests" */ = {
 			isa = XCConfigurationList;
@@ -401,6 +410,7 @@
 				BF99A4421D3F6D69001AC873 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
